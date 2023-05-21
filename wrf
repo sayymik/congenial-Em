@@ -1,0 +1,1052 @@
+-------------------------------------
+Translated Report (Full Report Below)
+-------------------------------------
+
+Process:               ShooterGame [2803]
+Path:                  /Users/USER/Library/Application Support/Steam/*/ShooterGame.app/Contents/MacOS/ShooterGame
+Identifier:            com.epicgames.ShooterGame
+Version:               4.5.1 (4.5.1)
+Code Type:             X86-64 (Translated)
+Parent Process:        launchd [1]
+User ID:               501
+
+Date/Time:             2023-05-21 03:44:27.5124 +0200
+OS Version:            macOS 13.3.1 (22E772610a)
+Report Version:        12
+Anonymous UUID:        1336B6B9-0655-AC67-F27D-586A43A54D9F
+
+Sleep/Wake UUID:       BF7286D3-2D4F-4FB4-8B1E-DDF2E08C720E
+
+Time Awake Since Boot: 94000 seconds
+Time Since Wake:       20882 seconds
+
+System Integrity Protection: enabled
+
+Crashed Thread:        34  RenderThread 0
+
+Exception Type:        EXC_BAD_ACCESS (SIGSEGV)
+Exception Codes:       KERN_INVALID_ADDRESS at 0x0000000000000003
+Exception Codes:       0x0000000000000001, 0x0000000000000003
+
+Termination Reason:    Namespace SIGNAL, Code 11 Segmentation fault: 11
+Terminating Process:   exc handler [2803]
+
+VM Region Info: 0x3 is not in any region.  Bytes before following region: 140722854248445
+      REGION TYPE                    START - END         [ VSIZE] PRT/MAX SHRMOD  REGION DETAIL
+      UNUSED SPACE AT START
+--->  
+      mapped file              7ffc97bd4000-7ffca6080000 [228.7M] r-x/r-x SM=COW  ...t_id=8873ce0b
+
+Thread 0:: MainThrd Dispatch queue: com.apple.main-thread
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab745b2 mach_msg2_trap + 10
+2   libsystem_kernel.dylib        	    0x7ff80ab8272d mach_msg2_internal + 78
+3   libsystem_kernel.dylib        	    0x7ff80ab7b5e4 mach_msg_overwrite + 692
+4   libsystem_kernel.dylib        	    0x7ff80ab7489a mach_msg + 19
+5   CoreFoundation                	    0x7ff80ac8eb70 __CFRunLoopServiceMachPort + 145
+6   CoreFoundation                	    0x7ff80ac8d5fb __CFRunLoopRun + 1365
+7   CoreFoundation                	    0x7ff80ac8ca4c CFRunLoopRunSpecific + 560
+8   HIToolbox                     	    0x7ff814bbefcd RunCurrentEventLoopInMode + 292
+9   HIToolbox                     	    0x7ff814bbedde ReceiveNextEventCommon + 657
+10  HIToolbox                     	    0x7ff814bbeb38 _BlockUntilNextEventMatchingListInModeWithFilter + 64
+11  AppKit                        	    0x7ff80dc7e7a0 _DPSNextEvent + 858
+12  AppKit                        	    0x7ff80dc7d64a -[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:] + 1214
+13  gameoverlayrenderer.dylib     	       0x11d40c52d 0x11d3ed000 + 128301
+14  AppKit                        	    0x7ff80dc6fcb8 -[NSApplication run] + 586
+15  ShooterGame                   	       0x1031db067 tchar_main(int, wchar_t**) + 1319
+16  ShooterGame                   	       0x1031daaa4 main + 244
+17  dyld                          	       0x20be0041f start + 1903
+
+Thread 1:: com.apple.rosetta.exceptionserver
+0   runtime                       	    0x7ff7ffc78694 0x7ff7ffc74000 + 18068
+
+Thread 2:
+0   runtime                       	    0x7ff7ffc786c4 0x7ff7ffc74000 + 18116
+
+Thread 3:
+0   runtime                       	    0x7ff7ffc9687c 0x7ff7ffc74000 + 141436
+
+Thread 4:
+0   runtime                       	    0x7ff7ffc9687c 0x7ff7ffc74000 + 141436
+
+Thread 5:: MainThrd
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab74606 swtch_pri + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb08b6 cthread_yield + 20
+3   ShooterGame                   	       0x10491c7e8 FGenericPlatformProcess::Sleep(float) + 56
+4   ShooterGame                   	       0x1053375bf FDefaultGameMoviePlayer::WaitForMovieToFinish() + 255
+5   ShooterGame                   	       0x1031d5822 FEngineLoop::Init() + 402
+6   ShooterGame                   	       0x1031d6f46 GuardedMain(wchar_t const*) + 70
+7   ShooterGame                   	       0x1031da8da -[UE4AppDelegate runGameThread:] + 58
+8   ShooterGame                   	       0x1049a7254 -[FCocoaGameThread main] + 180
+9   Foundation                    	    0x7ff80ba707b3 __NSThread__start__ + 1009
+10  libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+11  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 6:: com.apple.NSEventThread
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab745b2 mach_msg2_trap + 10
+2   libsystem_kernel.dylib        	    0x7ff80ab8272d mach_msg2_internal + 78
+3   libsystem_kernel.dylib        	    0x7ff80ab7b5e4 mach_msg_overwrite + 692
+4   libsystem_kernel.dylib        	    0x7ff80ab7489a mach_msg + 19
+5   CoreFoundation                	    0x7ff80ac8eb70 __CFRunLoopServiceMachPort + 145
+6   CoreFoundation                	    0x7ff80ac8d5fb __CFRunLoopRun + 1365
+7   CoreFoundation                	    0x7ff80ac8ca4c CFRunLoopRunSpecific + 560
+8   AppKit                        	    0x7ff80ddde909 _NSEventThread + 132
+9   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+10  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 7:: PoolThread 0
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   ShooterGame                   	       0x1049319bc FPThreadEvent::Wait(unsigned int, bool) + 556
+4   ShooterGame                   	       0x10495ae61 FQueuedThread::Run() + 81
+5   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+6   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+7   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 8:: PoolThread 1
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   ShooterGame                   	       0x1049319bc FPThreadEvent::Wait(unsigned int, bool) + 556
+4   ShooterGame                   	       0x10495ae61 FQueuedThread::Run() + 81
+5   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+6   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+7   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 9:: PoolThread 2
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   ShooterGame                   	       0x1049319bc FPThreadEvent::Wait(unsigned int, bool) + 556
+4   ShooterGame                   	       0x10495ae61 FQueuedThread::Run() + 81
+5   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+6   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+7   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 10:: PoolThread 3
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   ShooterGame                   	       0x1049319bc FPThreadEvent::Wait(unsigned int, bool) + 556
+4   ShooterGame                   	       0x10495ae61 FQueuedThread::Run() + 81
+5   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+6   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+7   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 11:: FThreadedMusicPlayer
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab76fbe __semwait_signal + 10
+2   libsystem_c.dylib             	    0x7ff80aa69585 nanosleep + 196
+3   libsystem_c.dylib             	    0x7ff80aa694bb usleep + 53
+4   ShooterGame                   	       0x10491c7e1 FGenericPlatformProcess::Sleep(float) + 49
+5   ShooterGame                   	       0x1059a4480 FThreadedMusicPlayer::Run() + 3600
+6   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+7   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+8   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 12:: caulk.messenger.shared:17
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab7452e semaphore_wait_trap + 10
+2   caulk                         	    0x7ff8148f507e caulk::semaphore::timed_wait(double) + 150
+3   caulk                         	    0x7ff8148f4f9c caulk::concurrent::details::worker_thread::run() + 30
+4   caulk                         	    0x7ff8148f4cb0 void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*) + 41
+5   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+6   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 13:: TaskGraphThreadNP 0
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   ShooterGame                   	       0x1049319bc FPThreadEvent::Wait(unsigned int, bool) + 556
+4   ShooterGame                   	       0x10496f9e9 FTaskThreadAnyThread::Stall(FNothing, bool) + 137
+5   ShooterGame                   	       0x10496f920 FTaskThreadAnyThread::ProcessTasks() + 112
+6   ShooterGame                   	       0x10496f53d FTaskThreadAnyThread::ProcessTasksUntilQuit(int) + 141
+7   ShooterGame                   	       0x10496d2ac FTaskThreadBase::Run() + 60
+8   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+9   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+10  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 14:: TaskGraphThreadNP 1
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   ShooterGame                   	       0x1049319bc FPThreadEvent::Wait(unsigned int, bool) + 556
+4   ShooterGame                   	       0x10496f9e9 FTaskThreadAnyThread::Stall(FNothing, bool) + 137
+5   ShooterGame                   	       0x10496f920 FTaskThreadAnyThread::ProcessTasks() + 112
+6   ShooterGame                   	       0x10496f53d FTaskThreadAnyThread::ProcessTasksUntilQuit(int) + 141
+7   ShooterGame                   	       0x10496d2ac FTaskThreadBase::Run() + 60
+8   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+9   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+10  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 15:: TaskGraphThreadNP 2
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   ShooterGame                   	       0x1049319bc FPThreadEvent::Wait(unsigned int, bool) + 556
+4   ShooterGame                   	       0x10496f9e9 FTaskThreadAnyThread::Stall(FNothing, bool) + 137
+5   ShooterGame                   	       0x10496f920 FTaskThreadAnyThread::ProcessTasks() + 112
+6   ShooterGame                   	       0x10496f53d FTaskThreadAnyThread::ProcessTasksUntilQuit(int) + 141
+7   ShooterGame                   	       0x10496d2ac FTaskThreadBase::Run() + 60
+8   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+9   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+10  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 16:: TaskGraphThreadNP 3
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   ShooterGame                   	       0x1049319bc FPThreadEvent::Wait(unsigned int, bool) + 556
+4   ShooterGame                   	       0x10496f9e9 FTaskThreadAnyThread::Stall(FNothing, bool) + 137
+5   ShooterGame                   	       0x10496f920 FTaskThreadAnyThread::ProcessTasks() + 112
+6   ShooterGame                   	       0x10496f53d FTaskThreadAnyThread::ProcessTasksUntilQuit(int) + 141
+7   ShooterGame                   	       0x10496d2ac FTaskThreadBase::Run() + 60
+8   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+9   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+10  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 17:
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab7b29e poll + 10
+2   ShooterGame                   	       0x102d4ae2b SteamNetworkingSocketsLib::SteamDatagramThreadProc() + 1547
+3   ShooterGame                   	       0x102d4e0f9 void* std::__1::__thread_proxy<std::__1::tuple<void (*)()>>(void*) + 89
+4   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+5   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 18:: OnlineAsyncTaskThreadSteam
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   ShooterGame                   	       0x1049318bf FPThreadEvent::Wait(unsigned int, bool) + 303
+4   ShooterGame                   	       0x1053276e6 FOnlineAsyncTaskManager::Run() + 166
+5   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+6   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+7   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 19:
+0   runtime                       	    0x7ff7ffc9687c 0x7ff7ffc74000 + 141436
+
+Thread 20:: com.apple.audio.IOThread.client
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab745b2 mach_msg2_trap + 10
+2   libsystem_kernel.dylib        	    0x7ff80ab8272d mach_msg2_internal + 78
+3   libsystem_kernel.dylib        	    0x7ff80ab7b5e4 mach_msg_overwrite + 692
+4   libsystem_kernel.dylib        	    0x7ff80ab7489a mach_msg + 19
+5   CoreAudio                     	    0x7ff80cdbc175 HALB_MachPort::SendSimpleMessageWithSimpleReply(unsigned int, unsigned int, int, int&, bool, unsigned int) + 111
+6   CoreAudio                     	    0x7ff80cca66a1 HALC_ProxyIOContext::IOWorkLoop() + 4035
+7   CoreAudio                     	    0x7ff80cca5049 invocation function for block in HALC_ProxyIOContext::HALC_ProxyIOContext(unsigned int, unsigned int) + 80
+8   CoreAudio                     	    0x7ff80ce14946 HALB_IOThread::Entry(void*) + 72
+9   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+10  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 21:: com.apple.NSURLConnectionLoader
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab745b2 mach_msg2_trap + 10
+2   libsystem_kernel.dylib        	    0x7ff80ab8272d mach_msg2_internal + 78
+3   libsystem_kernel.dylib        	    0x7ff80ab7b5e4 mach_msg_overwrite + 692
+4   libsystem_kernel.dylib        	    0x7ff80ab7489a mach_msg + 19
+5   CoreFoundation                	    0x7ff80ac8eb70 __CFRunLoopServiceMachPort + 145
+6   CoreFoundation                	    0x7ff80ac8d5fb __CFRunLoopRun + 1365
+7   CoreFoundation                	    0x7ff80ac8ca4c CFRunLoopRunSpecific + 560
+8   CFNetwork                     	    0x7ff80f568cba 0x7ff80f32a000 + 2354362
+9   Foundation                    	    0x7ff80ba707b3 __NSThread__start__ + 1009
+10  libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+11  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 22:: AsyncIOSystem
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   ShooterGame                   	       0x1049319bc FPThreadEvent::Wait(unsigned int, bool) + 556
+4   ShooterGame                   	       0x104a5ea2b FAsyncIOSystemBase::Tick() + 1883
+5   ShooterGame                   	       0x104a5e2bc non-virtual thunk to FAsyncIOSystemBase::Run() + 76
+6   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+7   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+8   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 23:: FMessageBus.Router
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   ShooterGame                   	       0x1049318bf FPThreadEvent::Wait(unsigned int, bool) + 303
+4   ShooterGame                   	       0x1051385b4 FMessageRouter::Run() + 212
+5   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+6   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+7   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 24:
+0   runtime                       	    0x7ff7ffc9687c 0x7ff7ffc74000 + 141436
+
+Thread 25:
+0   runtime                       	    0x7ff7ffc9687c 0x7ff7ffc74000 + 141436
+
+Thread 26:: com.apple.coremedia.rootQueue.48
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab74546 semaphore_timedwait_trap + 10
+2   libdispatch.dylib             	    0x7ff80aa12582 _dispatch_sema4_timedwait + 72
+3   libdispatch.dylib             	    0x7ff80aa129cd _dispatch_semaphore_wait_slow + 58
+4   libdispatch.dylib             	    0x7ff80aa21dcb _dispatch_worker_thread + 324
+5   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+6   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 27:: SlateLoadingThread
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab76fbe __semwait_signal + 10
+2   libsystem_c.dylib             	    0x7ff80aa69585 nanosleep + 196
+3   libsystem_c.dylib             	    0x7ff80aa694bb usleep + 53
+4   ShooterGame                   	       0x10491c7e1 FGenericPlatformProcess::Sleep(float) + 49
+5   ShooterGame                   	       0x105339e5d FSlateLoadingSynchronizationMechanism::SlateThreadRunMainLoop() + 365
+6   ShooterGame                   	       0x105339f22 FSlateLoadingThreadTask::Run() + 82
+7   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+8   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+9   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 28:: com.apple.coremedia.rootQueue.49
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab74546 semaphore_timedwait_trap + 10
+2   libdispatch.dylib             	    0x7ff80aa12582 _dispatch_sema4_timedwait + 72
+3   libdispatch.dylib             	    0x7ff80aa129cd _dispatch_semaphore_wait_slow + 58
+4   libdispatch.dylib             	    0x7ff80aa21dcb _dispatch_worker_thread + 324
+5   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+6   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 29:: com.apple.coremedia.rootQueue.47
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab74546 semaphore_timedwait_trap + 10
+2   libdispatch.dylib             	    0x7ff80aa12582 _dispatch_sema4_timedwait + 72
+3   libdispatch.dylib             	    0x7ff80aa129cd _dispatch_semaphore_wait_slow + 58
+4   libdispatch.dylib             	    0x7ff80aa21dcb _dispatch_worker_thread + 324
+5   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+6   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 30:: com.apple.coremedia.rootQueue.48
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab74546 semaphore_timedwait_trap + 10
+2   libdispatch.dylib             	    0x7ff80aa12582 _dispatch_sema4_timedwait + 72
+3   libdispatch.dylib             	    0x7ff80aa129cd _dispatch_semaphore_wait_slow + 58
+4   libdispatch.dylib             	    0x7ff80aa21dcb _dispatch_worker_thread + 324
+5   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+6   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 31:: com.apple.coremedia.rootQueue.47
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab74546 semaphore_timedwait_trap + 10
+2   libdispatch.dylib             	    0x7ff80aa12582 _dispatch_sema4_timedwait + 72
+3   libdispatch.dylib             	    0x7ff80aa129cd _dispatch_semaphore_wait_slow + 58
+4   libdispatch.dylib             	    0x7ff80aa21dcb _dispatch_worker_thread + 324
+5   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+6   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 32:
+0   runtime                       	    0x7ff7ffc9687c 0x7ff7ffc74000 + 141436
+
+Thread 33:: com.apple.coremedia.videomediaconverter
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   CoreMedia                     	    0x7ff81493654b WaitOnCondition + 11
+4   CoreMedia                     	    0x7ff814922033 FigSemaphoreWaitRelative + 145
+5   MediaToolbox                  	    0x7ff81a435c8b 0x7ff81a0db000 + 3517579
+6   CoreMedia                     	    0x7ff81493505a figThreadMain + 276
+7   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+8   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 34 Crashed:: RenderThread 0
+0   ShooterGame                   	       0x1049be5e2 FOutputDeviceMacError::Serialize(wchar_t const*, ELogVerbosity::Type, FName const&) + 226
+1   ShooterGame                   	       0x104a13e9f FOutputDevice::Logf(wchar_t const*, ...) + 431
+2   ShooterGame                   	       0x104a007d0 FDebug::AssertFailed(char const*, char const*, int, wchar_t const*, ...) + 480
+3   ShooterGame                   	       0x1051de8df IsRHIDeviceIntel() + 47
+4   ShooterGame                   	       0x1051959f9 FOpenGLDynamicRHI::SetPendingBlendStateForActiveRenderTargets(FOpenGLContextState&) + 905
+5   ShooterGame                   	       0x10519aaf1 FOpenGLDynamicRHI::RHIDrawIndexedPrimitive(FRHIIndexBuffer*, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) + 129
+6   ShooterGame                   	       0x1051deb22 FRHICommandDrawIndexedPrimitive::Execute(FRHICommandListBase&) + 66
+7   ShooterGame                   	       0x1051df52a FRHICommandListExecutor::ExecuteInner_DoExecute(FRHICommandListBase&) + 106
+8   ShooterGame                   	       0x1051dfb1a FRHICommandListExecutor::ExecuteInner(FRHICommandListBase&) + 1082
+9   ShooterGame                   	       0x1051e1600 FRHICommandList::EndDrawingViewport(FRHIViewport*, bool, bool) + 448
+10  ShooterGame                   	       0x106784b53 FSlateRHIRenderer::DrawWindow_RenderThread(FRHICommandListImmediate&, FSlateRHIRenderer::FViewportInfo const&, FSlateWindowElementList const&, bool) + 4739
+11  ShooterGame                   	       0x106797cdf TGraphTask<FSlateRHIRenderer::DrawWindows_Private(FSlateDrawBuffer&)::EURCMacro_SlateDrawWindowsCommand>::ExecuteTask(TArray<FBaseGraphTask*, FDefaultAllocator>&, ENamedThreads::Type) + 47
+12  ShooterGame                   	       0x10496dd7c FNamedTaskThread::ProcessTasksNamedThread(int, bool) + 204
+13  ShooterGame                   	       0x10496d4d5 FNamedTaskThread::ProcessTasksUntilQuit(int) + 149
+14  ShooterGame                   	       0x1051f5e38 RenderingThreadMain(FEvent*) + 136
+15  ShooterGame                   	       0x10520279d FRenderingThread::Run() + 13
+16  ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+17  libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+18  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 35:: RTHeartBeat 0
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab76fbe __semwait_signal + 10
+2   libsystem_c.dylib             	    0x7ff80aa69585 nanosleep + 196
+3   libsystem_c.dylib             	    0x7ff80aa694bb usleep + 53
+4   ShooterGame                   	       0x10491c7e1 FGenericPlatformProcess::Sleep(float) + 49
+5   ShooterGame                   	       0x105200501 FRenderingThreadTickHeartbeat::Run() + 81
+6   ShooterGame                   	       0x104966ebb FRunnableThreadPThread::_ThreadProc(void*) + 155
+7   libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+8   libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 36:: VxCommandHandler
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   libvivoxsdk.dylib             	       0x11eb88d25 VivoxSystem::InternalEvent::Wait(int) + 231
+4   libvivoxsdk.dylib             	       0x11eb867ff VivoxSystem::IntraProcessSemaphore::Wait(VivoxSystem::TimeSpan const&) const + 13
+5   libvivoxsdk.dylib             	       0x11eb78a4b VivoxSystem::MessageQueue::Dequeue(VivoxSystem::TimeSpan const&) + 113
+6   libvivoxsdk.dylib             	       0x11eb93ba8 VivoxSystem::Apartment::RunAsync() + 222
+7   libvivoxsdk.dylib             	       0x11eb93d18 VivoxSystem::Apartment::Run() + 46
+8   libvivoxsdk.dylib             	       0x11eb8de29 VivoxSystem::MessageRouter::ThreadStart(VivoxSystem::Object*) + 121
+9   libvivoxsdk.dylib             	       0x11eb9d312 VivoxSystem::OnThreadStart(void*) + 37
+10  libvivoxsdk.dylib             	       0x11eb88b45 VivoxSystem::OnThreadStart(void*) + 16
+11  libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+12  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 37:: VxVivox Audio
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   libvivoxsdk.dylib             	       0x11eb88d25 VivoxSystem::InternalEvent::Wait(int) + 231
+4   libvivoxsdk.dylib             	       0x11eb867ff VivoxSystem::IntraProcessSemaphore::Wait(VivoxSystem::TimeSpan const&) const + 13
+5   libvivoxsdk.dylib             	       0x11eb78a4b VivoxSystem::MessageQueue::Dequeue(VivoxSystem::TimeSpan const&) + 113
+6   libvivoxsdk.dylib             	       0x11eb789cc VivoxSystem::MessageQueue::Dequeue(VivoxSystem::DateTime const&) + 62
+7   libvivoxsdk.dylib             	       0x11eb93961 VivoxSystem::Apartment::RunRealtime() + 755
+8   libvivoxsdk.dylib             	       0x11eb93d18 VivoxSystem::Apartment::Run() + 46
+9   libvivoxsdk.dylib             	       0x11eb8de29 VivoxSystem::MessageRouter::ThreadStart(VivoxSystem::Object*) + 121
+10  libvivoxsdk.dylib             	       0x11eb9d312 VivoxSystem::OnThreadStart(void*) + 37
+11  libvivoxsdk.dylib             	       0x11eb88b45 VivoxSystem::OnThreadStart(void*) + 16
+12  libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+13  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+Thread 38:: com.apple.coremedia.videomentor
+0   ???                           	    0x7ff89a77e9a8 ???
+1   libsystem_kernel.dylib        	    0x7ff80ab770ee __psynch_cvwait + 10
+2   libsystem_pthread.dylib       	    0x7ff80abb3758 _pthread_cond_wait + 1242
+3   CoreMedia                     	    0x7ff81493654b WaitOnCondition + 11
+4   CoreMedia                     	    0x7ff814922033 FigSemaphoreWaitRelative + 145
+5   MediaToolbox                  	    0x7ff81a2a1aaa 0x7ff81a0db000 + 1862314
+6   MediaToolbox                  	    0x7ff81a29d98e 0x7ff81a0db000 + 1845646
+7   MediaToolbox                  	    0x7ff81a2987af 0x7ff81a0db000 + 1824687
+8   MediaToolbox                  	    0x7ff81a2945e2 0x7ff81a0db000 + 1807842
+9   CoreMedia                     	    0x7ff81493505a figThreadMain + 276
+10  libsystem_pthread.dylib       	    0x7ff80abb31d3 _pthread_start + 125
+11  libsystem_pthread.dylib       	    0x7ff80abaebd3 thread_start + 15
+
+
+Thread 34 crashed with X86 Thread State (64-bit):
+  rax: 0x0000000107af84e0  rbx: 0x0000000000003f66  rcx: 0x0000000107af0258  rdx: 0xffffffffffffffd8
+  rdi: 0x0000000107ae02a0  rsi: 0x0000000000000000  rbp: 0x0000000314977a80  rsp: 0x0000000314977a60
+   r8: 0x00000000001ade86   r9: 0xffffffff00000000  r10: 0x00007ff84e28dc18  r11: 0x00006000025fe62c
+  r12: 0x0000000000000099  r13: 0x00000003149783e0  r14: 0x0000000107c3fb10  r15: 0x0000000107ae02a0
+  rip: <unavailable>       rfl: 0x0000000000000202
+ tmp0: 0x0000000000000001 tmp1: 0x0000000000000003 tmp2: 0x000000010e7e1cd8
+
+
+Binary Images:
+       0x20bdfa000 -        0x20be95fff dyld (*) <f22a1143-9732-3e23-a8b7-cbade6bb8301> /usr/lib/dyld
+    0x7ff7ffc74000 -     0x7ff7ffca3fff runtime (*) <baf9136b-e1ff-3661-ad17-0f4ca7ce58f9> /usr/libexec/rosetta/runtime
+       0x11cd94000 -        0x11cde7fff libRosettaRuntime (*) <73cd5d0d-71d4-353e-9740-af3964d9a4ae> /Library/Apple/*/libRosettaRuntime
+       0x102b06000 -        0x107757fff com.epicgames.ShooterGame (4.5.1) <a0e28167-8ee8-3f43-84f9-c5f261f79632> /Users/USER/Library/Application Support/Steam/*/ShooterGame.app/Contents/MacOS/ShooterGame
+       0x11d324000 -        0x11d324fff steamloader.dylib (*) <c85b1892-a204-3ace-a1aa-10e5f2b49bdf> /Users/USER/Library/Application Support/Steam/*/steamloader.dylib
+       0x11d3ed000 -        0x11d41cfff gameoverlayrenderer.dylib (*) <ed5dc6dc-7cd2-3a41-9d9a-5fa9a9092586> /Users/USER/Library/Application Support/Steam/*/gameoverlayrenderer.dylib
+       0x11d35b000 -        0x11d36efff libortp.dylib (*) <b7f17958-c121-32c1-bd58-a5dbe2a09344> /Users/USER/Library/Application Support/Steam/*/ShooterGame.app/Contents/MacOS/libortp.dylib
+       0x11e917000 -        0x11f3bafff libvivoxsdk.dylib (*) <90b66e0f-3d11-38b7-8f45-f16e751c6155> /Users/USER/Library/Application Support/Steam/*/ShooterGame.app/Contents/MacOS/libvivoxsdk.dylib
+       0x11d341000 -        0x11d345fff libogg.dylib (*) <d42809af-b9ea-dc86-96ff-acaf6e92b3eb> /Users/USER/Library/Application Support/Steam/*/ShooterGame.app/Contents/MacOS/libogg.dylib
+       0x11dc0d000 -        0x11dedbfff libvorbis.dylib (*) <0a30d11c-bda9-62d8-05c6-8370c2428844> /Users/USER/Library/Application Support/Steam/*/ShooterGame.app/Contents/MacOS/libvorbis.dylib
+       0x11d47c000 -        0x11d484fff libsteam_api.dylib (*) <e4caa406-a4e3-3165-b90e-34b202295fef> /Users/USER/Library/Application Support/Steam/*/ShooterGame.app/Contents/MacOS/libsteam_api.dylib
+       0x123547000 -        0x124dcefff libEOSSDK-Mac-Shipping.dylib (*) <8b168487-332c-3fb3-9bc3-8f88698a598a> /Users/USER/Library/Application Support/Steam/*/ShooterGame.app/Contents/MacOS/libEOSSDK-Mac-Shipping.dylib
+       0x11da7d000 -        0x11da8cfff libobjc-trampolines.dylib (*) <897a6cf2-c56d-3dd0-97fc-a533d6d7ff79> /usr/lib/libobjc-trampolines.dylib
+       0x12a93e000 -        0x12aa7dfff com.apple.audio.units.Components (1.14) <5e3fa16a-0aee-3421-b365-2e7162baa125> /System/Library/Components/CoreAudio.component/Contents/MacOS/CoreAudio
+       0x12cad6000 -        0x12d459fff com.apple.audio.AudioDSPComponents (1.0) <f2af54ea-2b0c-3565-90c6-a0114f5ff24a> /System/Library/Components/AudioDSP.component/Contents/MacOS/AudioDSP
+       0x1325b1000 -        0x133a10fff steamclient.dylib (*) <61c783e4-8563-37f0-8c67-dd5e82f60a08> /Users/USER/Library/Application Support/Steam/*/steamclient.dylib
+       0x12b6c0000 -        0x12b6d7fff libtier0_s.dylib (*) <84933ed5-a490-3afa-892b-e6e7a1c53318> /Users/USER/Library/Application Support/Steam/*/libtier0_s.dylib
+       0x12b727000 -        0x12b752fff libvstdlib_s.dylib (*) <f2af1730-7a59-3301-8fb1-b643a40d9b1b> /Users/USER/Library/Application Support/Steam/*/libvstdlib_s.dylib
+       0x12a8be000 -        0x12a8cdfff libaudio.dylib (*) <74a0dfeb-aea0-3f9d-a196-7d0c4f7cca61> /Users/USER/Library/Application Support/Steam/*/libaudio.dylib
+       0x12a85f000 -        0x12a876fff crashhandler.dylib (*) <36b7e463-85ac-3c3b-a63d-7ea46c3629b9> /Users/USER/Library/Application Support/Steam/*/crashhandler.dylib
+       0x12a8f3000 -        0x12a8fafff com.googlecode.google-breakpad (*) <c98be7e7-b888-338c-a7e7-40dd223401d4> /Users/USER/Library/Application Support/Steam/*/Breakpad.framework/Versions/A/Breakpad
+       0x12b868000 -        0x12b877fff breakpadUtilities.dylib (*) <c62cc81e-aa3c-32b7-ab0e-68d19109fd3f> /Users/USER/Library/Application Support/Steam/*/Breakpad.framework/Versions/A/Resources/breakpadUtilities.dylib
+       0x12bac2000 -        0x12bb31fff com.apple.AppleMetalOpenGLRenderer (1.0) <027e9813-3b69-34e6-95b7-f301ddc36c36> /System/Library/Extensions/AppleMetalOpenGLRenderer.bundle/Contents/MacOS/AppleMetalOpenGLRenderer
+       0x12e900000 -        0x12e911fff com.epicgames.audiounit.radio (*) <65d0b9b4-6758-398d-a22a-3746d5ab5739> /Users/USER/Library/Application Support/Steam/*/ShooterGame.app/Contents/Resources/RadioEffectUnit.component/Contents/MacOS/RadioEffectUnit
+               0x0 - 0xffffffffffffffff ??? (*) <00000000-0000-0000-0000-000000000000> ???
+    0x7ff80ab73000 -     0x7ff80abacff7 libsystem_kernel.dylib (*) <08606a44-7008-3658-9f00-6c250b80e9c3> /usr/lib/system/libsystem_kernel.dylib
+    0x7ff80ac12000 -     0x7ff80b0acfff com.apple.CoreFoundation (6.9) <9ba40f2c-8716-3a1a-873b-f576ccc44fe6> /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+    0x7ff814b90000 -     0x7ff814e87ffd com.apple.HIToolbox (2.1.1) <a6003e8b-72cc-3d98-b569-26102836c61f> /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+    0x7ff80dc40000 -     0x7ff80ec47ff0 com.apple.AppKit (6.9) <af96f40f-d333-3647-9da4-eddc52df4753> /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+    0x7ff80abad000 -     0x7ff80abb8fff libsystem_pthread.dylib (*) <86dfa543-95fa-36b4-83c6-bf03d01b2aad> /usr/lib/system/libsystem_pthread.dylib
+    0x7ff80ba18000 -     0x7ff80c3a0ff8 com.apple.Foundation (6.9) <b2777f39-79a2-3f29-849d-99acb74e4a12> /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+    0x7ff80aa5a000 -     0x7ff80aae1ff7 libsystem_c.dylib (*) <0773ddbc-707e-3b56-ad3e-97aaa9b2c3ed> /usr/lib/system/libsystem_c.dylib
+    0x7ff8148f3000 -     0x7ff814917ff3 com.apple.audio.caulk (1.0) <5cb78fb4-56ec-336b-89da-f443d5ea6387> /System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk
+    0x7ff80cacd000 -     0x7ff80d17eff6 com.apple.audio.CoreAudio (5.0) <a0f46978-73da-3296-a0ca-07dd06707fd4> /System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
+    0x7ff80f32a000 -     0x7ff80f6caff3 com.apple.CFNetwork (1406.0.4) <7c0ddf2d-5375-319e-9acc-0a24c6d007bc> /System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
+    0x7ff80aa0f000 -     0x7ff80aa56ff3 libdispatch.dylib (*) <c03e068c-2b62-3aed-9358-e0aa79ff7851> /usr/lib/system/libdispatch.dylib
+    0x7ff814918000 -     0x7ff814a28ffd com.apple.CoreMedia (1.0) <0a243236-55c1-3cb9-adbf-9c7db6b38fc9> /System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+    0x7ff81a0db000 -     0x7ff81a8b3ff6 com.apple.MediaToolbox (1.0) <d5dc554b-2300-31ff-bad5-8eb2db272d67> /System/Library/Frameworks/MediaToolbox.framework/Versions/A/MediaToolbox
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=729.4M resident=0K(0%) swapped_out_or_unallocated=729.4M(100%)
+Writable regions: Total=1.9G written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=1.9G(100%)
+
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Accelerate framework               256K        2 
+Activity Tracing                   256K        1 
+CG backing stores                 5568K       12 
+CG image                            24K        6 
+ColorSync                          244K       27 
+CoreAnimation                       56K       10 
+CoreGraphics                        20K        4 
+CoreMedia memory pool              192K       11 
+CoreUI image data                  588K        8 
+Foundation                          16K        1 
+Kernel Alloc Once                    8K        1 
+MALLOC                           639.6M      103 
+MALLOC guard page                  192K        9 
+MALLOC_MEDIUM (reserved)         848.0M        8         reserved VM address space (unallocated)
+MALLOC_NANO (reserved)           256.0M        1         reserved VM address space (unallocated)
+OpenGL GLSL                        256K        3 
+Rosetta Arena                     4096K        2 
+Rosetta Generic                   1256K      311 
+Rosetta IndirectBranch            2048K        1 
+Rosetta JIT                      128.0M        1 
+Rosetta Return Stack               740K       74 
+Rosetta Thread Context             740K       74 
+SQLite page cache                  128K        1 
+STACK GUARD                         28K        7 
+Stack                             41.9M       38 
+Stack Guard                       56.1M       31 
+VM_ALLOCATE                       37.0M      135 
+VM_ALLOCATE (reserved)              28K        7         reserved VM address space (unallocated)
+__CTF                               824        1 
+__DATA                            30.0M      441 
+__DATA_CONST                      18.6M      257 
+__DATA_DIRTY                       805K      133 
+__FONT_DATA                        2352        1 
+__GLSLBUILTINS                    5174K        1 
+__LINKEDIT                       242.0M       28 
+__OBJC_RO                         66.2M        1 
+__OBJC_RW                         2009K        2 
+__TEXT                           487.4M      450 
+dyld private memory                772K        4 
+mapped file                        4.5G     1361 
+shared memory                     1036K       20 
+unshared pmap                     11.6M        7 
+===========                     =======  ======= 
+TOTAL                              7.3G     3596 
+TOTAL, minus reserved VM space     6.3G     3596 
+
+
+
+-----------
+Full Report
+-----------
+
+{"app_name":"ShooterGame","timestamp":"2023-05-21 03:44:29.00 +0200","app_version":"4.5.1","slice_uuid":"a0e28167-8ee8-3f43-84f9-c5f261f79632","build_version":"4.5.1","platform":1,"bundleID":"com.epicgames.ShooterGame","share_with_app_devs":1,"is_first_party":0,"bug_type":"309","os_version":"macOS 13.3.1 (22E772610a)","roots_installed":0,"name":"ShooterGame","incident_id":"DCA7D148-44E9-40B9-8B3A-2F25394F41CB"}
+{
+  "uptime" : 94000,
+  "procRole" : "Foreground",
+  "version" : 2,
+  "userID" : 501,
+  "deployVersion" : 210,
+  "modelCode" : "Mac14,6",
+  "coalitionID" : 5717,
+  "osVersion" : {
+    "train" : "macOS 13.3.1",
+    "build" : "22E772610a",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2023-05-21 03:44:27.5124 +0200",
+  "incident" : "DCA7D148-44E9-40B9-8B3A-2F25394F41CB",
+  "pid" : 2803,
+  "translated" : true,
+  "cpuType" : "X86-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2023-05-21 03:44:22.0397 +0200",
+  "procStartAbsTime" : 2274649193136,
+  "procExitAbsTime" : 2274780312932,
+  "procName" : "ShooterGame",
+  "procPath" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/ShooterGame.app\/Contents\/MacOS\/ShooterGame",
+  "bundleInfo" : {"CFBundleShortVersionString":"4.5.1","CFBundleVersion":"4.5.1","CFBundleIdentifier":"com.epicgames.ShooterGame"},
+  "storeInfo" : {"deviceIdentifierForVendor":"1AE82C1D-7A40-55EE-92D1-39B8315FE26E","thirdParty":true},
+  "parentProc" : "launchd",
+  "parentPid" : 1,
+  "coalitionName" : "com.epicgames.ShooterGame",
+  "crashReporterKey" : "1336B6B9-0655-AC67-F27D-586A43A54D9F",
+  "throttleTimeout" : 2147483647,
+  "codeSigningID" : "",
+  "codeSigningTeamID" : "",
+  "codeSigningValidationCategory" : 0,
+  "codeSigningTrustLevel" : 0,
+  "wakeTime" : 20882,
+  "sleepWakeUUID" : "BF7286D3-2D4F-4FB4-8B1E-DDF2E08C720E",
+  "sip" : "enabled",
+  "vmRegionInfo" : "0x3 is not in any region.  Bytes before following region: 140722854248445\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      mapped file              7ffc97bd4000-7ffca6080000 [228.7M] r-x\/r-x SM=COW  ...t_id=8873ce0b",
+  "exception" : {"codes":"0x0000000000000001, 0x0000000000000003","rawCodes":[1,3],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_INVALID_ADDRESS at 0x0000000000000003"},
+  "termination" : {"flags":0,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":2803},
+  "vmregioninfo" : "0x3 is not in any region.  Bytes before following region: 140722854248445\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      mapped file              7ffc97bd4000-7ffca6080000 [228.7M] r-x\/r-x SM=COW  ...t_id=8873ce0b",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 34,
+  "threads" : [{"id":1760492,"name":"MainThrd","queue":"com.apple.main-thread","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":5554,"symbol":"mach_msg2_trap","symbolLocation":10,"imageIndex":25},{"imageOffset":63277,"symbol":"mach_msg2_internal","symbolLocation":78,"imageIndex":25},{"imageOffset":34276,"symbol":"mach_msg_overwrite","symbolLocation":692,"imageIndex":25},{"imageOffset":6298,"symbol":"mach_msg","symbolLocation":19,"imageIndex":25},{"imageOffset":510832,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":145,"imageIndex":26},{"imageOffset":505339,"symbol":"__CFRunLoopRun","symbolLocation":1365,"imageIndex":26},{"imageOffset":502348,"symbol":"CFRunLoopRunSpecific","symbolLocation":560,"imageIndex":26},{"imageOffset":192461,"symbol":"RunCurrentEventLoopInMode","symbolLocation":292,"imageIndex":27},{"imageOffset":191966,"symbol":"ReceiveNextEventCommon","symbolLocation":657,"imageIndex":27},{"imageOffset":191288,"symbol":"_BlockUntilNextEventMatchingListInModeWithFilter","symbolLocation":64,"imageIndex":27},{"imageOffset":255904,"symbol":"_DPSNextEvent","symbolLocation":858,"imageIndex":28},{"imageOffset":251466,"symbol":"-[NSApplication(NSEvent) _nextEventMatchingEventMask:untilDate:inMode:dequeue:]","symbolLocation":1214,"imageIndex":28},{"imageOffset":128301,"imageIndex":5},{"imageOffset":195768,"symbol":"-[NSApplication run]","symbolLocation":586,"imageIndex":28},{"imageOffset":7164007,"symbol":"tchar_main(int, wchar_t**)","symbolLocation":1319,"imageIndex":3},{"imageOffset":7162532,"symbol":"main","symbolLocation":244,"imageIndex":3},{"imageOffset":25631,"symbol":"start","symbolLocation":1903,"imageIndex":0}]},{"id":1760628,"name":"com.apple.rosetta.exceptionserver","frames":[{"imageOffset":18068,"imageIndex":1}]},{"id":1760632,"frames":[{"imageOffset":18116,"imageIndex":1}]},{"id":1760633,"frames":[{"imageOffset":141436,"imageIndex":1}]},{"id":1760708,"frames":[{"imageOffset":141436,"imageIndex":1}]},{"id":1760712,"name":"MainThrd","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":5638,"symbol":"swtch_pri","symbolLocation":10,"imageIndex":25},{"imageOffset":14518,"symbol":"cthread_yield","symbolLocation":20,"imageIndex":29},{"imageOffset":31549416,"symbol":"FGenericPlatformProcess::Sleep(float)","symbolLocation":56,"imageIndex":3},{"imageOffset":42145215,"symbol":"FDefaultGameMoviePlayer::WaitForMovieToFinish()","symbolLocation":255,"imageIndex":3},{"imageOffset":7141410,"symbol":"FEngineLoop::Init()","symbolLocation":402,"imageIndex":3},{"imageOffset":7147334,"symbol":"GuardedMain(wchar_t const*)","symbolLocation":70,"imageIndex":3},{"imageOffset":7162074,"symbol":"-[UE4AppDelegate runGameThread:]","symbolLocation":58,"imageIndex":3},{"imageOffset":32117332,"symbol":"-[FCocoaGameThread main]","symbolLocation":180,"imageIndex":3},{"imageOffset":362419,"symbol":"__NSThread__start__","symbolLocation":1009,"imageIndex":30},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760716,"name":"com.apple.NSEventThread","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":5554,"symbol":"mach_msg2_trap","symbolLocation":10,"imageIndex":25},{"imageOffset":63277,"symbol":"mach_msg2_internal","symbolLocation":78,"imageIndex":25},{"imageOffset":34276,"symbol":"mach_msg_overwrite","symbolLocation":692,"imageIndex":25},{"imageOffset":6298,"symbol":"mach_msg","symbolLocation":19,"imageIndex":25},{"imageOffset":510832,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":145,"imageIndex":26},{"imageOffset":505339,"symbol":"__CFRunLoopRun","symbolLocation":1365,"imageIndex":26},{"imageOffset":502348,"symbol":"CFRunLoopRunSpecific","symbolLocation":560,"imageIndex":26},{"imageOffset":1698057,"symbol":"_NSEventThread","symbolLocation":132,"imageIndex":28},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760724,"name":"PoolThread 0","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":31635900,"symbol":"FPThreadEvent::Wait(unsigned int, bool)","symbolLocation":556,"imageIndex":3},{"imageOffset":31805025,"symbol":"FQueuedThread::Run()","symbolLocation":81,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760725,"name":"PoolThread 1","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":31635900,"symbol":"FPThreadEvent::Wait(unsigned int, bool)","symbolLocation":556,"imageIndex":3},{"imageOffset":31805025,"symbol":"FQueuedThread::Run()","symbolLocation":81,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760726,"name":"PoolThread 2","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":31635900,"symbol":"FPThreadEvent::Wait(unsigned int, bool)","symbolLocation":556,"imageIndex":3},{"imageOffset":31805025,"symbol":"FQueuedThread::Run()","symbolLocation":81,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760727,"name":"PoolThread 3","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":31635900,"symbol":"FPThreadEvent::Wait(unsigned int, bool)","symbolLocation":556,"imageIndex":3},{"imageOffset":31805025,"symbol":"FQueuedThread::Run()","symbolLocation":81,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760728,"name":"FThreadedMusicPlayer","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16318,"symbol":"__semwait_signal","symbolLocation":10,"imageIndex":25},{"imageOffset":62853,"symbol":"nanosleep","symbolLocation":196,"imageIndex":31},{"imageOffset":62651,"symbol":"usleep","symbolLocation":53,"imageIndex":31},{"imageOffset":31549409,"symbol":"FGenericPlatformProcess::Sleep(float)","symbolLocation":49,"imageIndex":3},{"imageOffset":48882816,"symbol":"FThreadedMusicPlayer::Run()","symbolLocation":3600,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760729,"name":"caulk.messenger.shared:17","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":5422,"symbol":"semaphore_wait_trap","symbolLocation":10,"imageIndex":25},{"imageOffset":8318,"symbol":"caulk::semaphore::timed_wait(double)","symbolLocation":150,"imageIndex":32},{"imageOffset":8092,"symbol":"caulk::concurrent::details::worker_thread::run()","symbolLocation":30,"imageIndex":32},{"imageOffset":7344,"symbol":"void* caulk::thread_proxy<std::__1::tuple<caulk::thread::attributes, void (caulk::concurrent::details::worker_thread::*)(), std::__1::tuple<caulk::concurrent::details::worker_thread*>>>(void*)","symbolLocation":41,"imageIndex":32},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760798,"name":"TaskGraphThreadNP 0","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":31635900,"symbol":"FPThreadEvent::Wait(unsigned int, bool)","symbolLocation":556,"imageIndex":3},{"imageOffset":31889897,"symbol":"FTaskThreadAnyThread::Stall(FNothing, bool)","symbolLocation":137,"imageIndex":3},{"imageOffset":31889696,"symbol":"FTaskThreadAnyThread::ProcessTasks()","symbolLocation":112,"imageIndex":3},{"imageOffset":31888701,"symbol":"FTaskThreadAnyThread::ProcessTasksUntilQuit(int)","symbolLocation":141,"imageIndex":3},{"imageOffset":31879852,"symbol":"FTaskThreadBase::Run()","symbolLocation":60,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760799,"name":"TaskGraphThreadNP 1","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":31635900,"symbol":"FPThreadEvent::Wait(unsigned int, bool)","symbolLocation":556,"imageIndex":3},{"imageOffset":31889897,"symbol":"FTaskThreadAnyThread::Stall(FNothing, bool)","symbolLocation":137,"imageIndex":3},{"imageOffset":31889696,"symbol":"FTaskThreadAnyThread::ProcessTasks()","symbolLocation":112,"imageIndex":3},{"imageOffset":31888701,"symbol":"FTaskThreadAnyThread::ProcessTasksUntilQuit(int)","symbolLocation":141,"imageIndex":3},{"imageOffset":31879852,"symbol":"FTaskThreadBase::Run()","symbolLocation":60,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760800,"name":"TaskGraphThreadNP 2","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":31635900,"symbol":"FPThreadEvent::Wait(unsigned int, bool)","symbolLocation":556,"imageIndex":3},{"imageOffset":31889897,"symbol":"FTaskThreadAnyThread::Stall(FNothing, bool)","symbolLocation":137,"imageIndex":3},{"imageOffset":31889696,"symbol":"FTaskThreadAnyThread::ProcessTasks()","symbolLocation":112,"imageIndex":3},{"imageOffset":31888701,"symbol":"FTaskThreadAnyThread::ProcessTasksUntilQuit(int)","symbolLocation":141,"imageIndex":3},{"imageOffset":31879852,"symbol":"FTaskThreadBase::Run()","symbolLocation":60,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760801,"name":"TaskGraphThreadNP 3","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":31635900,"symbol":"FPThreadEvent::Wait(unsigned int, bool)","symbolLocation":556,"imageIndex":3},{"imageOffset":31889897,"symbol":"FTaskThreadAnyThread::Stall(FNothing, bool)","symbolLocation":137,"imageIndex":3},{"imageOffset":31889696,"symbol":"FTaskThreadAnyThread::ProcessTasks()","symbolLocation":112,"imageIndex":3},{"imageOffset":31888701,"symbol":"FTaskThreadAnyThread::ProcessTasksUntilQuit(int)","symbolLocation":141,"imageIndex":3},{"imageOffset":31879852,"symbol":"FTaskThreadBase::Run()","symbolLocation":60,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760813,"frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":33438,"symbol":"poll","symbolLocation":10,"imageIndex":25},{"imageOffset":2379307,"symbol":"SteamNetworkingSocketsLib::SteamDatagramThreadProc()","symbolLocation":1547,"imageIndex":3},{"imageOffset":2392313,"symbol":"void* std::__1::__thread_proxy<std::__1::tuple<void (*)()>>(void*)","symbolLocation":89,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760814,"name":"OnlineAsyncTaskThreadSteam","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":31635647,"symbol":"FPThreadEvent::Wait(unsigned int, bool)","symbolLocation":303,"imageIndex":3},{"imageOffset":42079974,"symbol":"FOnlineAsyncTaskManager::Run()","symbolLocation":166,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760822,"frames":[{"imageOffset":141436,"imageIndex":1}]},{"id":1760870,"name":"com.apple.audio.IOThread.client","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":5554,"symbol":"mach_msg2_trap","symbolLocation":10,"imageIndex":25},{"imageOffset":63277,"symbol":"mach_msg2_internal","symbolLocation":78,"imageIndex":25},{"imageOffset":34276,"symbol":"mach_msg_overwrite","symbolLocation":692,"imageIndex":25},{"imageOffset":6298,"symbol":"mach_msg","symbolLocation":19,"imageIndex":25},{"imageOffset":3076469,"symbol":"HALB_MachPort::SendSimpleMessageWithSimpleReply(unsigned int, unsigned int, int, int&, bool, unsigned int)","symbolLocation":111,"imageIndex":33},{"imageOffset":1939105,"symbol":"HALC_ProxyIOContext::IOWorkLoop()","symbolLocation":4035,"imageIndex":33},{"imageOffset":1933385,"symbol":"invocation function for block in HALC_ProxyIOContext::HALC_ProxyIOContext(unsigned int, unsigned int)","symbolLocation":80,"imageIndex":33},{"imageOffset":3438918,"symbol":"HALB_IOThread::Entry(void*)","symbolLocation":72,"imageIndex":33},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760886,"name":"com.apple.NSURLConnectionLoader","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":5554,"symbol":"mach_msg2_trap","symbolLocation":10,"imageIndex":25},{"imageOffset":63277,"symbol":"mach_msg2_internal","symbolLocation":78,"imageIndex":25},{"imageOffset":34276,"symbol":"mach_msg_overwrite","symbolLocation":692,"imageIndex":25},{"imageOffset":6298,"symbol":"mach_msg","symbolLocation":19,"imageIndex":25},{"imageOffset":510832,"symbol":"__CFRunLoopServiceMachPort","symbolLocation":145,"imageIndex":26},{"imageOffset":505339,"symbol":"__CFRunLoopRun","symbolLocation":1365,"imageIndex":26},{"imageOffset":502348,"symbol":"CFRunLoopRunSpecific","symbolLocation":560,"imageIndex":26},{"imageOffset":2354362,"imageIndex":34},{"imageOffset":362419,"symbol":"__NSThread__start__","symbolLocation":1009,"imageIndex":30},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760888,"name":"AsyncIOSystem","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":31635900,"symbol":"FPThreadEvent::Wait(unsigned int, bool)","symbolLocation":556,"imageIndex":3},{"imageOffset":32868907,"symbol":"FAsyncIOSystemBase::Tick()","symbolLocation":1883,"imageIndex":3},{"imageOffset":32867004,"symbol":"non-virtual thunk to FAsyncIOSystemBase::Run()","symbolLocation":76,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760891,"name":"FMessageBus.Router","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":31635647,"symbol":"FPThreadEvent::Wait(unsigned int, bool)","symbolLocation":303,"imageIndex":3},{"imageOffset":40052148,"symbol":"FMessageRouter::Run()","symbolLocation":212,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760892,"frames":[{"imageOffset":141436,"imageIndex":1}]},{"id":1760893,"frames":[{"imageOffset":141436,"imageIndex":1}]},{"id":1760894,"name":"com.apple.coremedia.rootQueue.48","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":5446,"symbol":"semaphore_timedwait_trap","symbolLocation":10,"imageIndex":25},{"imageOffset":13698,"symbol":"_dispatch_sema4_timedwait","symbolLocation":72,"imageIndex":35},{"imageOffset":14797,"symbol":"_dispatch_semaphore_wait_slow","symbolLocation":58,"imageIndex":35},{"imageOffset":77259,"symbol":"_dispatch_worker_thread","symbolLocation":324,"imageIndex":35},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760895,"name":"SlateLoadingThread","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16318,"symbol":"__semwait_signal","symbolLocation":10,"imageIndex":25},{"imageOffset":62853,"symbol":"nanosleep","symbolLocation":196,"imageIndex":31},{"imageOffset":62651,"symbol":"usleep","symbolLocation":53,"imageIndex":31},{"imageOffset":31549409,"symbol":"FGenericPlatformProcess::Sleep(float)","symbolLocation":49,"imageIndex":3},{"imageOffset":42155613,"symbol":"FSlateLoadingSynchronizationMechanism::SlateThreadRunMainLoop()","symbolLocation":365,"imageIndex":3},{"imageOffset":42155810,"symbol":"FSlateLoadingThreadTask::Run()","symbolLocation":82,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760896,"name":"com.apple.coremedia.rootQueue.49","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":5446,"symbol":"semaphore_timedwait_trap","symbolLocation":10,"imageIndex":25},{"imageOffset":13698,"symbol":"_dispatch_sema4_timedwait","symbolLocation":72,"imageIndex":35},{"imageOffset":14797,"symbol":"_dispatch_semaphore_wait_slow","symbolLocation":58,"imageIndex":35},{"imageOffset":77259,"symbol":"_dispatch_worker_thread","symbolLocation":324,"imageIndex":35},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760897,"name":"com.apple.coremedia.rootQueue.47","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":5446,"symbol":"semaphore_timedwait_trap","symbolLocation":10,"imageIndex":25},{"imageOffset":13698,"symbol":"_dispatch_sema4_timedwait","symbolLocation":72,"imageIndex":35},{"imageOffset":14797,"symbol":"_dispatch_semaphore_wait_slow","symbolLocation":58,"imageIndex":35},{"imageOffset":77259,"symbol":"_dispatch_worker_thread","symbolLocation":324,"imageIndex":35},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760898,"name":"com.apple.coremedia.rootQueue.48","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":5446,"symbol":"semaphore_timedwait_trap","symbolLocation":10,"imageIndex":25},{"imageOffset":13698,"symbol":"_dispatch_sema4_timedwait","symbolLocation":72,"imageIndex":35},{"imageOffset":14797,"symbol":"_dispatch_semaphore_wait_slow","symbolLocation":58,"imageIndex":35},{"imageOffset":77259,"symbol":"_dispatch_worker_thread","symbolLocation":324,"imageIndex":35},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760899,"name":"com.apple.coremedia.rootQueue.47","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":5446,"symbol":"semaphore_timedwait_trap","symbolLocation":10,"imageIndex":25},{"imageOffset":13698,"symbol":"_dispatch_sema4_timedwait","symbolLocation":72,"imageIndex":35},{"imageOffset":14797,"symbol":"_dispatch_semaphore_wait_slow","symbolLocation":58,"imageIndex":35},{"imageOffset":77259,"symbol":"_dispatch_worker_thread","symbolLocation":324,"imageIndex":35},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760900,"frames":[{"imageOffset":141436,"imageIndex":1}]},{"id":1760901,"name":"com.apple.coremedia.videomediaconverter","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":124235,"symbol":"WaitOnCondition","symbolLocation":11,"imageIndex":36},{"imageOffset":41011,"symbol":"FigSemaphoreWaitRelative","symbolLocation":145,"imageIndex":36},{"imageOffset":3517579,"imageIndex":37},{"imageOffset":118874,"symbol":"figThreadMain","symbolLocation":276,"imageIndex":36},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"triggered":true,"id":1760902,"name":"RenderThread 0","threadState":{"flavor":"x86_THREAD_STATE","rbp":{"value":13230373504},"r12":{"value":153},"rosetta":{"tmp2":{"value":4538113240},"tmp1":{"value":3},"tmp0":{"value":1}},"rbx":{"value":16230},"r8":{"value":1760902},"r15":{"value":4423811744,"symbolLocation":0,"symbol":"GErrorHist"},"r10":{"value":140704439917592,"symbolLocation":24,"symbol":"__cxxabiv1::(anonymous namespace)::GlobalStatic<__cxxabiv1::(anonymous namespace)::LibcppMutex>::instance"},"rdx":{"value":18446744073709551576},"rdi":{"value":4423811744,"symbolLocation":0,"symbol":"GErrorHist"},"r9":{"value":18446744069414584320},"r13":{"value":13230375904},"rflags":{"value":514},"rax":{"value":4423910624,"symbolLocation":0,"symbol":"GIsGuarded"},"rsp":{"value":13230373472},"r11":{"value":105553156105772},"rcx":{"value":4423877208,"symbolLocation":65464,"symbol":"GErrorHist"},"r14":{"value":4425251600,"symbolLocation":0,"symbol":"FMacPlatformOutputDevices::GetError()::Singleton"},"rsi":{"value":0}},"frames":[{"imageOffset":32212450,"symbol":"FOutputDeviceMacError::Serialize(wchar_t const*, ELogVerbosity::Type, FName const&)","symbolLocation":226,"imageIndex":3},{"imageOffset":32562847,"symbol":"FOutputDevice::Logf(wchar_t const*, ...)","symbolLocation":431,"imageIndex":3},{"imageOffset":32483280,"symbol":"FDebug::AssertFailed(char const*, char const*, int, wchar_t const*, ...)","symbolLocation":480,"imageIndex":3},{"imageOffset":40732895,"symbol":"IsRHIDeviceIntel()","symbolLocation":47,"imageIndex":3},{"imageOffset":40434169,"symbol":"FOpenGLDynamicRHI::SetPendingBlendStateForActiveRenderTargets(FOpenGLContextState&)","symbolLocation":905,"imageIndex":3},{"imageOffset":40454897,"symbol":"FOpenGLDynamicRHI::RHIDrawIndexedPrimitive(FRHIIndexBuffer*, unsigned int, int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)","symbolLocation":129,"imageIndex":3},{"imageOffset":40733474,"symbol":"FRHICommandDrawIndexedPrimitive::Execute(FRHICommandListBase&)","symbolLocation":66,"imageIndex":3},{"imageOffset":40736042,"symbol":"FRHICommandListExecutor::ExecuteInner_DoExecute(FRHICommandListBase&)","symbolLocation":106,"imageIndex":3},{"imageOffset":40737562,"symbol":"FRHICommandListExecutor::ExecuteInner(FRHICommandListBase&)","symbolLocation":1082,"imageIndex":3},{"imageOffset":40744448,"symbol":"FRHICommandList::EndDrawingViewport(FRHIViewport*, bool, bool)","symbolLocation":448,"imageIndex":3},{"imageOffset":63433555,"symbol":"FSlateRHIRenderer::DrawWindow_RenderThread(FRHICommandListImmediate&, FSlateRHIRenderer::FViewportInfo const&, FSlateWindowElementList const&, bool)","symbolLocation":4739,"imageIndex":3},{"imageOffset":63511775,"symbol":"TGraphTask<FSlateRHIRenderer::DrawWindows_Private(FSlateDrawBuffer&)::EURCMacro_SlateDrawWindowsCommand>::ExecuteTask(TArray<FBaseGraphTask*, FDefaultAllocator>&, ENamedThreads::Type)","symbolLocation":47,"imageIndex":3},{"imageOffset":31882620,"symbol":"FNamedTaskThread::ProcessTasksNamedThread(int, bool)","symbolLocation":204,"imageIndex":3},{"imageOffset":31880405,"symbol":"FNamedTaskThread::ProcessTasksUntilQuit(int)","symbolLocation":149,"imageIndex":3},{"imageOffset":40828472,"symbol":"RenderingThreadMain(FEvent*)","symbolLocation":136,"imageIndex":3},{"imageOffset":40880029,"symbol":"FRenderingThread::Run()","symbolLocation":13,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760903,"name":"RTHeartBeat 0","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16318,"symbol":"__semwait_signal","symbolLocation":10,"imageIndex":25},{"imageOffset":62853,"symbol":"nanosleep","symbolLocation":196,"imageIndex":31},{"imageOffset":62651,"symbol":"usleep","symbolLocation":53,"imageIndex":31},{"imageOffset":31549409,"symbol":"FGenericPlatformProcess::Sleep(float)","symbolLocation":49,"imageIndex":3},{"imageOffset":40871169,"symbol":"FRenderingThreadTickHeartbeat::Run()","symbolLocation":81,"imageIndex":3},{"imageOffset":31854267,"symbol":"FRunnableThreadPThread::_ThreadProc(void*)","symbolLocation":155,"imageIndex":3},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760909,"name":"VxCommandHandler","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":2563365,"symbol":"VivoxSystem::InternalEvent::Wait(int)","symbolLocation":231,"imageIndex":7},{"imageOffset":2553855,"symbol":"VivoxSystem::IntraProcessSemaphore::Wait(VivoxSystem::TimeSpan const&) const","symbolLocation":13,"imageIndex":7},{"imageOffset":2497099,"symbol":"VivoxSystem::MessageQueue::Dequeue(VivoxSystem::TimeSpan const&)","symbolLocation":113,"imageIndex":7},{"imageOffset":2608040,"symbol":"VivoxSystem::Apartment::RunAsync()","symbolLocation":222,"imageIndex":7},{"imageOffset":2608408,"symbol":"VivoxSystem::Apartment::Run()","symbolLocation":46,"imageIndex":7},{"imageOffset":2584105,"symbol":"VivoxSystem::MessageRouter::ThreadStart(VivoxSystem::Object*)","symbolLocation":121,"imageIndex":7},{"imageOffset":2646802,"symbol":"VivoxSystem::OnThreadStart(void*)","symbolLocation":37,"imageIndex":7},{"imageOffset":2562885,"symbol":"VivoxSystem::OnThreadStart(void*)","symbolLocation":16,"imageIndex":7},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760911,"name":"VxVivox Audio","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":2563365,"symbol":"VivoxSystem::InternalEvent::Wait(int)","symbolLocation":231,"imageIndex":7},{"imageOffset":2553855,"symbol":"VivoxSystem::IntraProcessSemaphore::Wait(VivoxSystem::TimeSpan const&) const","symbolLocation":13,"imageIndex":7},{"imageOffset":2497099,"symbol":"VivoxSystem::MessageQueue::Dequeue(VivoxSystem::TimeSpan const&)","symbolLocation":113,"imageIndex":7},{"imageOffset":2496972,"symbol":"VivoxSystem::MessageQueue::Dequeue(VivoxSystem::DateTime const&)","symbolLocation":62,"imageIndex":7},{"imageOffset":2607457,"symbol":"VivoxSystem::Apartment::RunRealtime()","symbolLocation":755,"imageIndex":7},{"imageOffset":2608408,"symbol":"VivoxSystem::Apartment::Run()","symbolLocation":46,"imageIndex":7},{"imageOffset":2584105,"symbol":"VivoxSystem::MessageRouter::ThreadStart(VivoxSystem::Object*)","symbolLocation":121,"imageIndex":7},{"imageOffset":2646802,"symbol":"VivoxSystem::OnThreadStart(void*)","symbolLocation":37,"imageIndex":7},{"imageOffset":2562885,"symbol":"VivoxSystem::OnThreadStart(void*)","symbolLocation":16,"imageIndex":7},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]},{"id":1760933,"name":"com.apple.coremedia.videomentor","frames":[{"imageOffset":140705720166824,"imageIndex":24},{"imageOffset":16622,"symbol":"__psynch_cvwait","symbolLocation":10,"imageIndex":25},{"imageOffset":26456,"symbol":"_pthread_cond_wait","symbolLocation":1242,"imageIndex":29},{"imageOffset":124235,"symbol":"WaitOnCondition","symbolLocation":11,"imageIndex":36},{"imageOffset":41011,"symbol":"FigSemaphoreWaitRelative","symbolLocation":145,"imageIndex":36},{"imageOffset":1862314,"imageIndex":37},{"imageOffset":1845646,"imageIndex":37},{"imageOffset":1824687,"imageIndex":37},{"imageOffset":1807842,"imageIndex":37},{"imageOffset":118874,"symbol":"figThreadMain","symbolLocation":276,"imageIndex":36},{"imageOffset":25043,"symbol":"_pthread_start","symbolLocation":125,"imageIndex":29},{"imageOffset":7123,"symbol":"thread_start","symbolLocation":15,"imageIndex":29}]}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 8789139456,
+    "size" : 638976,
+    "uuid" : "f22a1143-9732-3e23-a8b7-cbade6bb8301",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 140703124897792,
+    "size" : 196608,
+    "uuid" : "baf9136b-e1ff-3661-ad17-0f4ca7ce58f9",
+    "path" : "\/usr\/libexec\/rosetta\/runtime",
+    "name" : "runtime"
+  },
+  {
+    "source" : "P",
+    "arch" : "arm64",
+    "base" : 4778967040,
+    "size" : 344064,
+    "uuid" : "73cd5d0d-71d4-353e-9740-af3964d9a4ae",
+    "path" : "\/Library\/Apple\/*\/libRosettaRuntime",
+    "name" : "libRosettaRuntime"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4340080640,
+    "CFBundleShortVersionString" : "4.5.1",
+    "CFBundleIdentifier" : "com.epicgames.ShooterGame",
+    "size" : 80027648,
+    "uuid" : "a0e28167-8ee8-3f43-84f9-c5f261f79632",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/ShooterGame.app\/Contents\/MacOS\/ShooterGame",
+    "name" : "ShooterGame",
+    "CFBundleVersion" : "4.5.1"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4784799744,
+    "size" : 4096,
+    "uuid" : "c85b1892-a204-3ace-a1aa-10e5f2b49bdf",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/steamloader.dylib",
+    "name" : "steamloader.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4785623040,
+    "size" : 196608,
+    "uuid" : "ed5dc6dc-7cd2-3a41-9d9a-5fa9a9092586",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/gameoverlayrenderer.dylib",
+    "name" : "gameoverlayrenderer.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4785025024,
+    "size" : 81920,
+    "uuid" : "b7f17958-c121-32c1-bd58-a5dbe2a09344",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/ShooterGame.app\/Contents\/MacOS\/libortp.dylib",
+    "name" : "libortp.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4807815168,
+    "size" : 11157504,
+    "uuid" : "90b66e0f-3d11-38b7-8f45-f16e751c6155",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/ShooterGame.app\/Contents\/MacOS\/libvivoxsdk.dylib",
+    "name" : "libvivoxsdk.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4784918528,
+    "size" : 20480,
+    "uuid" : "d42809af-b9ea-dc86-96ff-acaf6e92b3eb",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/ShooterGame.app\/Contents\/MacOS\/libogg.dylib",
+    "name" : "libogg.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4794142720,
+    "size" : 2945024,
+    "uuid" : "0a30d11c-bda9-62d8-05c6-8370c2428844",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/ShooterGame.app\/Contents\/MacOS\/libvorbis.dylib",
+    "name" : "libvorbis.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4786208768,
+    "size" : 36864,
+    "uuid" : "e4caa406-a4e3-3165-b90e-34b202295fef",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/ShooterGame.app\/Contents\/MacOS\/libsteam_api.dylib",
+    "name" : "libsteam_api.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4887703552,
+    "size" : 25722880,
+    "uuid" : "8b168487-332c-3fb3-9bc3-8f88698a598a",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/ShooterGame.app\/Contents\/MacOS\/libEOSSDK-Mac-Shipping.dylib",
+    "name" : "libEOSSDK-Mac-Shipping.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4792504320,
+    "size" : 65536,
+    "uuid" : "897a6cf2-c56d-3dd0-97fc-a533d6d7ff79",
+    "path" : "\/usr\/lib\/libobjc-trampolines.dylib",
+    "name" : "libobjc-trampolines.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 5009301504,
+    "CFBundleShortVersionString" : "1.14",
+    "CFBundleIdentifier" : "com.apple.audio.units.Components",
+    "size" : 1310720,
+    "uuid" : "5e3fa16a-0aee-3421-b365-2e7162baa125",
+    "path" : "\/System\/Library\/Components\/CoreAudio.component\/Contents\/MacOS\/CoreAudio",
+    "name" : "CoreAudio",
+    "CFBundleVersion" : "1.14"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 5044527104,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.apple.audio.AudioDSPComponents",
+    "size" : 9977856,
+    "uuid" : "f2af54ea-2b0c-3565-90c6-a0114f5ff24a",
+    "path" : "\/System\/Library\/Components\/AudioDSP.component\/Contents\/MacOS\/AudioDSP",
+    "name" : "AudioDSP",
+    "CFBundleVersion" : "1"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 5139795968,
+    "size" : 21364736,
+    "uuid" : "61c783e4-8563-37f0-8c67-dd5e82f60a08",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/steamclient.dylib",
+    "name" : "steamclient.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 5023465472,
+    "size" : 98304,
+    "uuid" : "84933ed5-a490-3afa-892b-e6e7a1c53318",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/libtier0_s.dylib",
+    "name" : "libtier0_s.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 5023887360,
+    "size" : 180224,
+    "uuid" : "f2af1730-7a59-3301-8fb1-b643a40d9b1b",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/libvstdlib_s.dylib",
+    "name" : "libvstdlib_s.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 5008777216,
+    "size" : 65536,
+    "uuid" : "74a0dfeb-aea0-3f9d-a196-7d0c4f7cca61",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/libaudio.dylib",
+    "name" : "libaudio.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 5008388096,
+    "size" : 98304,
+    "uuid" : "36b7e463-85ac-3c3b-a63d-7ea46c3629b9",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/crashhandler.dylib",
+    "name" : "crashhandler.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 5008994304,
+    "CFBundleIdentifier" : "com.googlecode.google-breakpad",
+    "size" : 32768,
+    "uuid" : "c98be7e7-b888-338c-a7e7-40dd223401d4",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Breakpad.framework\/Versions\/A\/Breakpad",
+    "name" : "Breakpad",
+    "CFBundleVersion" : "1.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 5025202176,
+    "size" : 65536,
+    "uuid" : "c62cc81e-aa3c-32b7-ab0e-68d19109fd3f",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/Breakpad.framework\/Versions\/A\/Resources\/breakpadUtilities.dylib",
+    "name" : "breakpadUtilities.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 5027667968,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.apple.AppleMetalOpenGLRenderer",
+    "size" : 458752,
+    "uuid" : "027e9813-3b69-34e6-95b7-f301ddc36c36",
+    "path" : "\/System\/Library\/Extensions\/AppleMetalOpenGLRenderer.bundle\/Contents\/MacOS\/AppleMetalOpenGLRenderer",
+    "name" : "AppleMetalOpenGLRenderer",
+    "CFBundleVersion" : "1"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 5076156416,
+    "CFBundleIdentifier" : "com.epicgames.audiounit.radio",
+    "size" : 73728,
+    "uuid" : "65d0b9b4-6758-398d-a22a-3746d5ab5739",
+    "path" : "\/Users\/USER\/Library\/Application Support\/Steam\/*\/ShooterGame.app\/Contents\/Resources\/RadioEffectUnit.component\/Contents\/MacOS\/RadioEffectUnit",
+    "name" : "RadioEffectUnit",
+    "CFBundleVersion" : "1.0.0"
+  },
+  {
+    "size" : 0,
+    "source" : "A",
+    "base" : 0,
+    "uuid" : "00000000-0000-0000-0000-000000000000"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703308394496,
+    "size" : 237560,
+    "uuid" : "08606a44-7008-3658-9f00-6c250b80e9c3",
+    "path" : "\/usr\/lib\/system\/libsystem_kernel.dylib",
+    "name" : "libsystem_kernel.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703309045760,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.CoreFoundation",
+    "size" : 4829184,
+    "uuid" : "9ba40f2c-8716-3a1a-873b-f576ccc44fe6",
+    "path" : "\/System\/Library\/Frameworks\/CoreFoundation.framework\/Versions\/A\/CoreFoundation",
+    "name" : "CoreFoundation",
+    "CFBundleVersion" : "1971"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703476285440,
+    "CFBundleShortVersionString" : "2.1.1",
+    "CFBundleIdentifier" : "com.apple.HIToolbox",
+    "size" : 3112958,
+    "uuid" : "a6003e8b-72cc-3d98-b569-26102836c61f",
+    "path" : "\/System\/Library\/Frameworks\/Carbon.framework\/Versions\/A\/Frameworks\/HIToolbox.framework\/Versions\/A\/HIToolbox",
+    "name" : "HIToolbox"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703359565824,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.AppKit",
+    "size" : 16809969,
+    "uuid" : "af96f40f-d333-3647-9da4-eddc52df4753",
+    "path" : "\/System\/Library\/Frameworks\/AppKit.framework\/Versions\/C\/AppKit",
+    "name" : "AppKit",
+    "CFBundleVersion" : "2299.50.120"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703308632064,
+    "size" : 49152,
+    "uuid" : "86dfa543-95fa-36b4-83c6-bf03d01b2aad",
+    "path" : "\/usr\/lib\/system\/libsystem_pthread.dylib",
+    "name" : "libsystem_pthread.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703323750400,
+    "CFBundleShortVersionString" : "6.9",
+    "CFBundleIdentifier" : "com.apple.Foundation",
+    "size" : 9998329,
+    "uuid" : "b2777f39-79a2-3f29-849d-99acb74e4a12",
+    "path" : "\/System\/Library\/Frameworks\/Foundation.framework\/Versions\/C\/Foundation",
+    "name" : "Foundation",
+    "CFBundleVersion" : "1971"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703307243520,
+    "size" : 557048,
+    "uuid" : "0773ddbc-707e-3b56-ad3e-97aaa9b2c3ed",
+    "path" : "\/usr\/lib\/system\/libsystem_c.dylib",
+    "name" : "libsystem_c.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703473545216,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.apple.audio.caulk",
+    "size" : 151540,
+    "uuid" : "5cb78fb4-56ec-336b-89da-f443d5ea6387",
+    "path" : "\/System\/Library\/PrivateFrameworks\/caulk.framework\/Versions\/A\/caulk",
+    "name" : "caulk"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703341268992,
+    "CFBundleShortVersionString" : "5.0",
+    "CFBundleIdentifier" : "com.apple.audio.CoreAudio",
+    "size" : 7020535,
+    "uuid" : "a0f46978-73da-3296-a0ca-07dd06707fd4",
+    "path" : "\/System\/Library\/Frameworks\/CoreAudio.framework\/Versions\/A\/CoreAudio",
+    "name" : "CoreAudio",
+    "CFBundleVersion" : "5.0"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703383592960,
+    "CFBundleShortVersionString" : "1406.0.4",
+    "CFBundleIdentifier" : "com.apple.CFNetwork",
+    "size" : 3805172,
+    "uuid" : "7c0ddf2d-5375-319e-9acc-0a24c6d007bc",
+    "path" : "\/System\/Library\/Frameworks\/CFNetwork.framework\/Versions\/A\/CFNetwork",
+    "name" : "CFNetwork",
+    "CFBundleVersion" : "1406.0.4"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703306936320,
+    "size" : 294900,
+    "uuid" : "c03e068c-2b62-3aed-9358-e0aa79ff7851",
+    "path" : "\/usr\/lib\/system\/libdispatch.dylib",
+    "name" : "libdispatch.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703473696768,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.apple.CoreMedia",
+    "size" : 1118206,
+    "uuid" : "0a243236-55c1-3cb9-adbf-9c7db6b38fc9",
+    "path" : "\/System\/Library\/Frameworks\/CoreMedia.framework\/Versions\/A\/CoreMedia",
+    "name" : "CoreMedia",
+    "CFBundleVersion" : "3015.23.1.4.3"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703565721600,
+    "CFBundleShortVersionString" : "1.0",
+    "CFBundleIdentifier" : "com.apple.MediaToolbox",
+    "size" : 8228855,
+    "uuid" : "d5dc554b-2300-31ff-bad5-8eb2db272d67",
+    "path" : "\/System\/Library\/Frameworks\/MediaToolbox.framework\/Versions\/A\/MediaToolbox",
+    "name" : "MediaToolbox",
+    "CFBundleVersion" : "3015.23.1.4.3"
+  }
+],
+  "sharedCache" : {
+  "base" : 140703304499200,
+  "size" : 21474836480,
+  "uuid" : "b81581ae-ff6f-3644-8c21-c969ac66f1fa"
+},
+  "vmSummary" : "ReadOnly portion of Libraries: Total=729.4M resident=0K(0%) swapped_out_or_unallocated=729.4M(100%)\nWritable regions: Total=1.9G written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=1.9G(100%)\n\n                                VIRTUAL   REGION \nREGION TYPE                        SIZE    COUNT (non-coalesced) \n===========                     =======  ======= \nAccelerate framework               256K        2 \nActivity Tracing                   256K        1 \nCG backing stores                 5568K       12 \nCG image                            24K        6 \nColorSync                          244K       27 \nCoreAnimation                       56K       10 \nCoreGraphics                        20K        4 \nCoreMedia memory pool              192K       11 \nCoreUI image data                  588K        8 \nFoundation                          16K        1 \nKernel Alloc Once                    8K        1 \nMALLOC                           639.6M      103 \nMALLOC guard page                  192K        9 \nMALLOC_MEDIUM (reserved)         848.0M        8         reserved VM address space (unallocated)\nMALLOC_NANO (reserved)           256.0M        1         reserved VM address space (unallocated)\nOpenGL GLSL                        256K        3 \nRosetta Arena                     4096K        2 \nRosetta Generic                   1256K      311 \nRosetta IndirectBranch            2048K        1 \nRosetta JIT                      128.0M        1 \nRosetta Return Stack               740K       74 \nRosetta Thread Context             740K       74 \nSQLite page cache                  128K        1 \nSTACK GUARD                         28K        7 \nStack                             41.9M       38 \nStack Guard                       56.1M       31 \nVM_ALLOCATE                       37.0M      135 \nVM_ALLOCATE (reserved)              28K        7         reserved VM address space (unallocated)\n__CTF                               824        1 \n__DATA                            30.0M      441 \n__DATA_CONST                      18.6M      257 \n__DATA_DIRTY                       805K      133 \n__FONT_DATA                        2352        1 \n__GLSLBUILTINS                    5174K        1 \n__LINKEDIT                       242.0M       28 \n__OBJC_RO                         66.2M        1 \n__OBJC_RW                         2009K        2 \n__TEXT                           487.4M      450 \ndyld private memory                772K        4 \nmapped file                        4.5G     1361 \nshared memory                     1036K       20 \nunshared pmap                     11.6M        7 \n===========                     =======  ======= \nTOTAL                              7.3G     3596 \nTOTAL, minus reserved VM space     6.3G     3596 \n",
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "name" : "RenderThread 0"
+  }
+},
+  "logWritingSignature" : "e6f4d14716ffe3ecd7ff2adb9f58c4b17213bb54",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "5fb4245a1bbfe8005e33a1e1",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000021
+    },
+    {
+      "rolloutId" : "62c74108bcb0435c2153f963",
+      "factorPackIds" : {
+        "SIRI_TEXT_TO_SPEECH" : "64599e0866e8b82abff78329"
+      },
+      "deploymentId" : 240000172
+    }
+  ],
+  "experiments" : [
+    {
+      "treatmentId" : "c28e4ee6-1b08-4f90-8e05-2809e78310a3",
+      "experimentId" : "6317d2003d24842ff850182a",
+      "deploymentId" : 400000013
+    },
+    {
+      "treatmentId" : "6dd670af-0633-45e4-ae5f-122ae4df02be",
+      "experimentId" : "64406ba83deb637ac8a04419",
+      "deploymentId" : 900000005
+    }
+  ]
+}
+}
+
+Model: Mac14,6, BootROM 8422.100.650, proc 12:8:4 processors, 64 GB, SMC 
+Graphics: Apple M2 Max, Apple M2 Max, Built-In
+Display: AW2720HFA, 1920 x 1080 (1080p FHD - Full High Definition), Main, MirrorOff, Online
+Display: Color LCD, 3456 x 2234 Retina, MirrorOff, Online
+Display: MSI  AG321CR, 1920 x 1080 (1080p FHD - Full High Definition), MirrorOff, Online
+Memory Module: LPDDR5, Micron
+AirPort: spairport_wireless_card_type_wifi (0x14E4, 0x4388), wl0: Mar  1 2023 00:48:45 version 23.20.71.0.40.50.87 FWID 01-4929a159
+Bluetooth: Version (null), 0 services, 0 devices, 0 incoming serial ports
+Network Service: Wi-Fi, AirPort, en0
+USB Device: USB31Bus
+USB Device: USB3.0 Hub
+USB Device: USB 10/100/1000 LAN
+USB Device: USB2.0 Hub
+USB Device: USB Billboard Device
+USB Device: HyperX Alloy MKW100
+USB Device: USB 2.0 Hub
+USB Device: USB 2.0 BILLBOARD
+USB Device: USB GAMING MOUSE
+USB Device: USB31Bus
+USB Device: USB31Bus
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Thunderbolt Bus: MacBook Pro, Apple Inc.
+Thunderbolt Bus: MacBook Pro, Apple Inc.
